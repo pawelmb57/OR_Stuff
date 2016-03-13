@@ -1,4 +1,4 @@
-
+option omit_zero_rows 1;
 
 for {1..2} {
 let {n in nodes , (t,h) in arcs} coefFix[n,t,h] := coef[n,t,h];
