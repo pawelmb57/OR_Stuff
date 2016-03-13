@@ -1,0 +1,91 @@
+
+
+
+set teams ordered := {'Clem','Duke','FSU','GT','UMD','UNC','NCSt','UVA','Wake'};
+set slots ordered := {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
+set weekends ordered := { 2..last(slots) by 2 };
+
+set otherTeams within teams := {'Clem','Duke','FSU','GT','UMD','UNC','NCSt','UVA','Wake'};
+
+var play{teams,slots} binary;	# =1 if team plays =0 if bye
+var home{teams,slots} binary;	# =1 if home =0 if away
+
+var weekendsPlay{teams,weekends} binary;
+var weekendsHome{teams,weekends} binary;
+
+var pair{teams,otherTeams,slots} binary;
+
+
+
+maximize f:0;
+
+# Linking Constraints
+####################################################################################################
+# Teams play 16 tour games
+	subject to sixteen_games {t in teams} : sum{s in slots} play[t,s] = 16;	
+
+# Teams play 8 home/away games
+	subject to home_away {t in teams}: sum{s in slots}  home[t,s] = 8;	
+
+# If team is on a bye, home=0
+	subject to linking_home_away {t in teams , s in slots} : home[t,s] - 10*play[t,s] <= 0;	
+
+# Linking play to weekendsPlay
+ 	subject to linking_weekendsPlay {t in teams , w in weekends}: 
+ 		(weekendsPlay[t,w] - play[t,w]) = 0;
+
+# # Linking home to weekendsHome
+	subject to linking_weekendsHome {t in teams , w in weekends}:
+		(weekendsHome[t,w] - home[t,w]) = 0;
+
+# Slot pairings
+# Teams play at most one game per slot
+	subject to slotpair1 {s in slots , t in teams } : 
+		sum { v in otherTeams : v<>t } pair[t,v,s] <= 1
+;
+
+# A team plays every other team exactly 2 times
+	subject to slotpair2 {v in otherTeams , t in teams : v<>t } : 
+		sum {  s in slots } pair[t,v,s] = 2
+;
+
+# Linking Play/Pair
+	subject to slotpairing1 {s in slots , t in teams} : 
+		sum { v in otherTeams : v<>t } (play[t,s] - pair[t,v,s]) >= 0
+;
+
+# Linking Play/Pair
+	subject to slotpairing2 {s in slots , t in teams} : 
+		sum { v in otherTeams : v<>t } (play[v,s] - pair[v,t,s]) >= 0
+;
+
+# Linking Pairs
+	subject to slotpairing3 {s in slots , t in teams , v in otherTeams : t<>v} : 
+		pair[t,v,s] - pair[v,t,s] = 0
+;
+
+# Identifying home/away teams
+	subject to homeaway { s in slots  } : 
+		sum{t in teams , v in otherTeams : v<>t} (pair[t,v,s]*play[t,s] + pair[t,v,s]*play[v,s]) <= 1
+;
+
+
+
+# Scheduling Constraints
+####################################################################################################
+
+# No more than 2 consecutive Home/Away Games
+	subject to two_consec_away {t in teams , s in 1..16} :
+		(play[t,s]+play[t,(s+1)]+play[t,(s+2)]) - 10*(home[t,s]+home[t,(s+1)]+home[t,(s+2)]) <= 2
+;
+
+# No more than 2 consecutive Home/Away Games
+	subject to two_consec_home {t in teams , s in 1..16} :
+		(play[t,s]+play[t,(s+1)]+play[t,(s+2)]) - 10*(home[t,s]+home[t,(s+1)]+home[t,(s+2)]) >= -26
+;
+
+# At least 2 home games in the first 5 weekends
+	subject to first_weekend_home_games {t in teams , w in 1..2} :
+		(play[t,w]+play[t,(w+1)]+play[t,(w+2)]+play[t,(w+3)]+play[t,(w+4)]
+		- 10*(home[t,w]+home[t,(w+1)]+home[t,(w+2)]+home[t,(w+3)]+home[t,(w+4)])) <= 10
+;
