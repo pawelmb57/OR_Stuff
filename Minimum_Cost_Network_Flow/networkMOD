@@ -1,0 +1,30 @@
+
+
+param nNodes;
+
+set nodes := 1..nNodes;
+set arcs within {nodes cross nodes};
+
+param nodeVal{nodes};		# node demand
+param arcCost{arcs};		# arc costs
+
+
+param coefFix{nodes,arcs};
+param objVarFix{arcs};
+
+var coef{nodes,arcs};		# A matrix
+var objVar{arcs} >= 0;			
+
+
+minimize fun: 
+	sum{ (t,h) in arcs } objVar[t,h]*arcCost[t,h]
+; 
+
+
+
+subject to c1 {(t,h) in arcs} : coef[t,t,h] = 1;
+subject to c2 {(t,h) in arcs} : coef[h,t,h] = -1;
+
+subject to c3  {n in nodes}   : 
+		sum{(t,h) in arcs} (coefFix[n,t,h]*objVar[t,h]) - nodeVal[n] = 0
+;
