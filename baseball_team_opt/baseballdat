@@ -1,0 +1,430 @@
+
+
+set players := AJBurnett AJPollock AdamEaton AdamJones AdamLind AdrianBeltre AdrianGonzalez AlAlburquerque AndreltonSimmons AndrewChafin AndrewMcCutchen AndrewMiller AnthonyBass AnthonyRizzo AntonioBastardo AroldisChapman ArquimedesCaminero AsdrubalCabrera AustinJackson BartoloColon BenRevere BillyBurns BlaineBoyer BlakeTreinen BradBrach BrandonBelt BrandonCrawford BrandonPhillips BrettCecil BrettGardner BrianDozier BrianMatusz BrianMcCann BrockHolt BryanMorris BryceHarper BusterPosey CameronMaybin CarlosBeltran CarlosGonzalez CarlosSantana CarlosTorres CarlosVillanueva CarsonSmith CesarRamos CharlieBlackmon ChrisCoghlan ChrisDavis ChrisSale ChrisTillman ChristianYelich ClaytonKershaw CodyAllen ColbyLewis ColeHamels CollinMcHugh CoreyKluber CraigKimbrel CurtisGranderson DallasKeuchel DanJennings DanielHudson DanielMurphy DavidOrtiz DavidPeralta DavidPrice DavidRobertson DeeGordon DellinBetances DerekNorris DexterFowler DidiGregorius EdinsonVolquez EdwinEncarnacion EnderInciarte EricHosmer EvanLongoria FelixHernandez FernandoSalas FranciscoCervelli FranciscoLiriano FranklinMorales GerritCole GioGonzalez GregoryPolanco HectorRondon IanDesmond IanKinsler JDMartinez JacobdeGrom JakeArrieta JakeOdorizzi JasonHammel JasonHeyward JasonKipnis JeanmarGomez JeffLocke JeffSamardzija JeremyJeffress JeurysFamilia JhonnyPeralta JocPederson JoeyVotto JohnDanks JohnLackey JohnnyCueto JonLester JordanZimmermann JoseAbreu JoseAltuve JoseAlvarez JoseBautista JoseQuintana JoshDonaldson JoshFields JoshReddick JuanNicasio JumboDiaz JunichiTazawa JustinGrimm JustinUpton JustinWilson KelvinHerrera KenleyJansen KevinKiermaier KevinPillar KoleCalhoun KyleGibson KyleSeager LanceLynn LiamHendriks LoganForsythe LorenzoCain LucasDuda LuisGarcia MadisonBumgarner MannyMachado MarcusSemien MarkBuehrle MarkMelancon MarlonByrd MartinPrado MattCarpenter MattDuffy MaxScherzer MichaelBrantley MiguelCabrera MikeLeake MikeMoustakas MikeTrout MookieBetts NeilWalker NelsonCruz NickMarkakis NolanArenado PaulGoldschmidt PedroBaez PedroStrop RADickey RandallDelgado RussellMartin RyanBraun SalvadorPerez SamDyson ScottKazmir SergioRomo ShawnKelley ShelbyMiller ShinSooChoo SonnyGray StarlingMarte StephenVogt ToddFrazier TonySipp TonyWatson TravisWood TrevorBauer TrevorPlouffe TrevorRosenthal TroyTulowitzki TysonRoss WadeDavis WadeMiley WeiYinChen WillHarris WillSmith WilmerFlores WilsonRamos XanderBogaerts YadierMolina YangervisSolarte YimiGarcia YoenisCespedes YordanoVentura YovaniGallardo YunelEscobar ZachBritton ZachMcAllister ZackGreinke;
+set superstars := ClaytonKershaw	ZackGreinke	FelixHernandez	ColeHamels	MiguelCabrera	AdrianGonzalez	TroyTulowitzki	JonLester	MarkBuehrle;
+set pitchers := AJBurnett	AlAlburquerque	AndrewChafin	AndrewMiller	AnthonyBass	AntonioBastardo	AroldisChapman	ArquimedesCaminero	BartoloColon	BlaineBoyer	BlakeTreinen	BradBrach	BrettCecil	BrianMatusz	BryanMorris	CarlosTorres	CarlosVillanueva	CarsonSmith	CesarRamos	ChrisSale	ChrisTillman	ClaytonKershaw	CodyAllen	ColbyLewis	ColeHamels	CollinMcHugh	CoreyKluber	CraigKimbrel	DallasKeuchel	DanJennings	DanielHudson	DavidPrice	DavidRobertson	DellinBetances	EdinsonVolquez	FelixHernandez	FernandoSalas	FranciscoLiriano	FranklinMorales	GerritCole	GioGonzalez	HectorRondon	JacobdeGrom	JakeArrieta	JakeOdorizzi	JasonHammel	JeanmarGomez	JeffLocke	JeffSamardzija	JeremyJeffress	JeurysFamilia	JohnDanks	JohnLackey	JohnnyCueto	JonLester	JordanZimmermann	JoseAlvarez	JoseQuintana	JoshFields	JuanNicasio	JumboDiaz	JunichiTazawa	JustinGrimm	JustinWilson	KelvinHerrera	KenleyJansen	KyleGibson	LanceLynn	LiamHendriks	LuisGarcia	MadisonBumgarner	MarkBuehrle	MarkMelancon	MaxScherzer	MikeLeake	PedroBaez	PedroStrop	RADickey	RandallDelgado	SamDyson	ScottKazmir	SergioRomo	ShawnKelley	ShelbyMiller	SonnyGray	TonySipp	TonyWatson	TravisWood	TrevorBauer	TrevorRosenthal	TysonRoss	WadeDavis	WadeMiley	WeiYinChen	WillHarris	WillSmith	YimiGarcia	YordanoVentura	YovaniGallardo	ZachBritton	ZachMcAllister	ZackGreinke;
+set batters := AJPollock	AdamEaton	AdamJones	AdamLind	AdrianBeltre	AdrianGonzalez	AndreltonSimmons	AndrewMcCutchen	AnthonyRizzo	AsdrubalCabrera	AustinJackson	BenRevere	BillyBurns	BrandonBelt	BrandonCrawford	BrandonPhillips	BrettGardner	BrianDozier	BrianMcCann	BrockHolt	BryceHarper	BusterPosey	CameronMaybin	CarlosBeltran	CarlosGonzalez	CarlosSantana	CharlieBlackmon	ChrisCoghlan	ChrisDavis	ChristianYelich	CurtisGranderson	DanielMurphy	DavidOrtiz	DavidPeralta	DeeGordon	DerekNorris	DexterFowler	DidiGregorius	EdwinEncarnacion	EnderInciarte	EricHosmer	EvanLongoria	FranciscoCervelli	GregoryPolanco	IanDesmond	IanKinsler	JDMartinez	JasonHeyward	JasonKipnis	JhonnyPeralta	JocPederson	JoeyVotto	JoseAbreu	JoseAltuve	JoseBautista	JoshDonaldson	JoshReddick	JustinUpton	KevinKiermaier	KevinPillar	KoleCalhoun	KyleSeager	LoganForsythe	LorenzoCain	LucasDuda	MannyMachado	MarcusSemien	MarlonByrd	MartinPrado	MattCarpenter	MattDuffy	MichaelBrantley	MiguelCabrera	MikeMoustakas	MikeTrout	MookieBetts	NeilWalker	NelsonCruz	NickMarkakis	NolanArenado	PaulGoldschmidt	RussellMartin	RyanBraun	SalvadorPerez	ShinSooChoo	StarlingMarte	StephenVogt	ToddFrazier	TrevorPlouffe	TroyTulowitzki	WilmerFlores	WilsonRamos	XanderBogaerts	YadierMolina	YangervisSolarte	YoenisCespedes	YunelEscobar;
+
+
+
+set variables := Salary first second third C Closer OF Reliever SP SS G PA HR R RBI SB BB K ISO BABIP AVG OBP SLG wOBA wRC BsR Off Def WAR;
+set hands := batLeft throwLeft;
+
+set battingPositions := 'OF'	'1B'	'3B'	'SS'	'2B'	'C';
+set pitchingPositions := "Reliever" "Closer" "SP";
+
+
+param playerdata :
+ 			 Salary first second third C Closer OF Reliever SP SS G PA HR R RBI SB BB K ISO BABIP AVG OBP SLG wOBA wRC BsR Off Def WAR :=
+AJBurnett 8500000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.8
+AJPollock 519500 0 0 0 0 0 1 0 0 0 157 673 20 111 76 39 0.079 0.132 0.182 0.338 0.315 0.367 0.498 0.371 132 7 32.1 8.7 6.6
+AdamEaton 560000 0 0 0 0 0 1 0 0 0 153 689 14 98 56 18 0.084 0.19 0.144 0.345 0.287 0.361 0.431 0.346 118 5.5 20.2 8.8 3.6
+AdamJones 13355106 0 0 0 0 0 1 0 0 0 137 581 27 74 82 3 0.041 0.176 0.205 0.286 0.269 0.308 0.474 0.334 109 0.3 6.4 8.8 3.6
+AdamLind 7500000 1 0 0 0 0 0 0 0 0 149 572 20 72 87 0 0.115 0.175 0.183 0.309 0.277 0.36 0.46 0.351 119 3.1 9.3 6.3 2.2
+AdrianBeltre 16000000 0 0 1 0 0 0 0 0 0 143 619 18 83 83 1 0.066 0.105 0.166 0.295 0.287 0.334 0.453 0.337 108 3.9 9.4 13.8 4.6
+AdrianGonzalez 21857142 1 0 0 0 0 0 0 0 0 156 643 28 76 90 0 0.096 0.166 0.205 0.294 0.275 0.35 0.48 0.354 129 5.6 15.9 7.5 3
+AlAlburquerque 1725000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3
+AndreltonSimmons 3142857 0 0 0 0 0 0 0 0 1 147 583 4 60 44 5 0.067 0.082 0.073 0.285 0.265 0.321 0.338 0.29 82 0.6 11.7 23.9 3.2
+AndrewChafin 507500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.7
+AndrewMcCutchen 10208333 0 0 0 0 0 1 0 0 0 157 685 23 91 96 11 0.143 0.194 0.196 0.339 0.292 0.401 0.488 0.38 146 1.1 36 2.5 5.8
+AndrewMiller 9000000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+AnthonyBass 725000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3
+AnthonyRizzo 5285714 1 0 0 0 0 0 0 0 0 160 701 31 94 101 17 0.111 0.15 0.234 0.289 0.278 0.387 0.512 0.384 145 1.9 38.6 8.9 5.5
+AntonioBastardo 3100000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6
+AroldisChapman 8050000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.5
+ArquimedesCaminero 515500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2
+AsdrubalCabrera 7500000 0 0 0 0 0 0 0 0 1 143 551 15 66 58 6 0.065 0.194 0.164 0.306 0.265 0.315 0.43 0.319 104 0.5 3.3 0.5 2.2
+AustinJackson 7700000 0 0 0 0 0 1 0 0 0 136 527 9 56 48 17 0.055 0.239 0.118 0.342 0.267 0.311 0.385 0.305 94 0 3.4 8.3 2.3
+BartoloColon 11000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.5
+BenRevere 4100000 0 0 0 0 0 1 0 0 0 152 634 2 84 45 31 0.05 0.101 0.071 0.338 0.306 0.342 0.377 0.316 98 8 6.2 8.7 1.9
+BillyBurns 507500 0 0 0 0 0 1 0 0 0 125 555 5 70 42 26 0.047 0.146 0.098 0.339 0.294 0.334 0.392 0.317 102 5.6 7.1 3.4 2.3
+BlaineBoyer 750000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2
+BlakeTreinen 512800 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4
+BradBrach 523000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9
+BrandonBelt 3600000 1 0 0 0 0 0 0 0 0 137 556 18 73 68 9 0.101 0.264 0.197 0.363 0.28 0.356 0.478 0.359 135 1.5 24.3 1.2 4.3
+BrandonCrawford 3175000 0 0 0 0 0 0 0 0 1 143 561 21 65 84 6 0.07 0.212 0.205 0.294 0.256 0.321 0.462 0.332 117 1.4 9.5 17.1 4.7
+BrandonPhillips 12083333 0 1 0 0 0 0 0 0 0 148 623 12 69 70 23 0.043 0.109 0.1 0.315 0.294 0.328 0.395 0.315 96 4 1 4.1 2.6
+BrettCecil 2475000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4
+BrettGardner 12500000 0 0 0 0 0 1 0 0 0 151 656 16 94 66 20 0.104 0.206 0.14 0.312 0.259 0.343 0.399 0.327 105 5.5 9.5 7 2.6
+BrianDozier 2000000 0 1 0 0 0 0 0 0 0 157 704 28 101 77 12 0.087 0.21 0.209 0.261 0.236 0.307 0.444 0.323 103 3.1 5.4 3.7 3.4
+BrianMatusz 3200000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+BrianMcCann 17000000 0 0 0 1 0 0 0 0 0 135 535 26 68 94 0 0.097 0.181 0.204 0.235 0.232 0.32 0.437 0.327 105 3.2 0.1 10.2 2.9
+BrockHolt 530500 0 0 0 0 0 1 0 0 0 129 509 2 56 45 8 0.09 0.191 0.099 0.35 0.28 0.349 0.379 0.322 98 4.3 3.2 2.5 2.4
+BryanMorris 531500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2
+BryceHarper 2500000 0 0 0 0 0 1 0 0 0 153 654 42 118 99 6 0.19 0.2 0.319 0.369 0.33 0.46 0.649 0.461 197 3.2 77.5 8.5 9.5
+BusterPosey 17277777 0 0 0 1 0 0 0 0 0 150 623 19 74 95 2 0.09 0.083 0.153 0.32 0.318 0.379 0.47 0.363 138 1.8 26 8.2 5.7
+CameronMaybin 7100000 0 0 0 0 0 1 0 0 0 141 555 10 65 59 23 0.081 0.184 0.103 0.316 0.267 0.327 0.37 0.307 94 1.5 2.6 5.3 1
+CarlosBeltran 15000000 0 0 0 0 0 1 0 0 0 133 531 19 57 67 0 0.085 0.16 0.195 0.297 0.276 0.337 0.471 0.346 119 0.4 11 10.4 1.9
+CarlosGonzalez 16428571 0 0 0 0 0 1 0 0 0 153 608 40 87 97 2 0.076 0.219 0.269 0.284 0.271 0.325 0.54 0.364 114 1.3 11.3 8.1 2.4
+CarlosSantana 6200000 1 0 0 0 0 0 0 0 0 154 666 19 72 85 11 0.162 0.183 0.164 0.261 0.231 0.357 0.395 0.331 110 1.3 8.7 8.3 2.4
+CarlosTorres 582125 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4
+CarlosVillanueva 2000000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2
+CarsonSmith 509500 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.1
+CesarRamos 1312500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6
+CharlieBlackmon 517500 0 0 0 0 0 1 0 0 0 157 682 17 93 58 43 0.067 0.164 0.163 0.325 0.287 0.347 0.45 0.345 101 3.2 4.3 5.7 2.1
+ChrisCoghlan 2505000 0 0 0 0 0 1 0 0 0 148 503 16 64 41 11 0.115 0.187 0.193 0.284 0.25 0.341 0.443 0.337 113 3.2 10.9 4.2 3.3
+ChrisDavis 12000000 1 0 0 0 0 0 0 0 0 160 670 47 100 117 2 0.125 0.31 0.3 0.319 0.262 0.361 0.562 0.39 147 0.5 36.3 5.5 5.6
+ChrisSale 6000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.2
+ChrisTillman 4315000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.9
+ChristianYelich 651000 0 0 0 0 0 1 0 0 0 126 525 7 63 44 16 0.09 0.192 0.116 0.37 0.3 0.366 0.416 0.343 117 1.9 12.3 7.3 2.3
+ClaytonKershaw 31000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8.6
+CodyAllen 547100 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.6
+ColbyLewis 4000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.6
+ColeHamels 23500000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.2
+CollinMcHugh 516300 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.9
+CoreyKluber 1000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.5
+CraigKimbrel 9250000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5
+CurtisGranderson 16000000 0 0 0 0 0 1 0 0 0 157 682 26 98 70 11 0.133 0.221 0.198 0.305 0.259 0.364 0.457 0.357 132 2.5 27.8 0.7 5.1
+DallasKeuchel 524500 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.1
+DanJennings 523000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+DanielHudson 800000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6
+DanielMurphy 8000000 0 1 0 0 0 0 0 0 0 130 538 14 56 73 2 0.058 0.071 0.168 0.278 0.281 0.322 0.449 0.325 110 0.3 5.9 1 2.5
+DavidOrtiz 16000000 1 0 0 0 0 0 0 0 0 146 614 37 73 108 0 0.125 0.155 0.28 0.264 0.273 0.36 0.553 0.379 138 5.2 21.6 15.2 2.8
+DavidPeralta 512000 0 0 0 0 0 1 0 0 0 149 517 17 61 78 9 0.085 0.207 0.21 0.368 0.312 0.371 0.522 0.38 138 3.7 26.7 7.7 3.7
+DavidPrice 19750000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.4
+DavidRobertson 10000000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8
+DeeGordon 2500000 0 1 0 0 0 0 0 0 0 145 653 4 88 46 58 0.038 0.139 0.085 0.383 0.333 0.359 0.418 0.337 113 4.9 14.6 8.6 4.6
+DellinBetances 507500 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.4
+DerekNorris 545000 0 0 0 1 0 0 0 0 0 147 557 14 65 62 4 0.063 0.235 0.153 0.31 0.25 0.305 0.404 0.309 98 0.9 2 7.7 2.4
+DexterFowler 9500000 0 0 0 0 0 1 0 0 0 156 690 17 102 46 20 0.122 0.223 0.161 0.308 0.25 0.346 0.411 0.333 110 0.2 8.1 0.6 3.2
+DidiGregorius 553900 0 0 0 0 0 0 0 0 1 155 578 9 57 56 5 0.057 0.147 0.105 0.297 0.265 0.318 0.37 0.303 89 3.5 4.1 14.2 3.1
+EdinsonVolquez 7500000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.6
+EdwinEncarnacion 10000000 1 0 0 0 0 0 0 0 0 146 624 39 94 111 3 0.123 0.157 0.28 0.267 0.277 0.372 0.557 0.392 150 2.2 33.6 11.7 4.5
+EnderInciarte 513000 0 0 0 0 0 1 0 0 0 132 561 6 73 45 21 0.046 0.103 0.105 0.329 0.303 0.338 0.408 0.325 100 3.3 3.6 10 3.3
+EricHosmer 5650000 1 0 0 0 0 0 0 0 0 158 667 18 98 93 7 0.091 0.162 0.162 0.336 0.297 0.363 0.459 0.355 125 3.1 22.1 11 3.5
+EvanLongoria 11500018 0 0 1 0 0 0 0 0 0 160 670 21 74 73 3 0.076 0.197 0.166 0.309 0.27 0.328 0.435 0.327 110 1.5 9.1 8.1 4.2
+FelixHernandez 24857142 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.8
+FernandoSalas 1370000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.7
+FranciscoCervelli 987500 0 0 0 1 0 0 0 0 0 130 510 7 56 43 1 0.09 0.184 0.106 0.359 0.295 0.37 0.401 0.341 119 0.7 10.7 9.3 3.8
+FranciscoLiriano 11666666 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.6
+FranklinMorales 1850000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4
+GerritCole 531000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.4
+GioGonzalez 11100000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.7
+GregoryPolanco 525000 0 0 0 0 0 1 0 0 0 153 652 9 83 52 27 0.084 0.186 0.125 0.308 0.256 0.32 0.381 0.304 94 5.3 1 0.3 2.3
+HectorRondon 544000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.6
+IanDesmond 11000000 0 0 0 0 0 0 0 0 1 156 641 19 69 62 13 0.07 0.292 0.151 0.307 0.233 0.29 0.384 0.294 83 5.5 7.1 3.3 1.7
+IanKinsler 16000000 0 1 0 0 0 0 0 0 0 154 675 11 94 73 10 0.064 0.119 0.131 0.323 0.296 0.342 0.428 0.335 111 0.6 8.9 8.4 4.2
+JDMartinez 3000000 0 0 0 0 0 1 0 0 0 158 657 38 93 102 3 0.081 0.271 0.253 0.339 0.282 0.344 0.535 0.372 137 2.2 25.7 0.1 5
+JacobdeGrom 531875 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.2
+JakeArrieta 3630000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7.3
+JakeOdorizzi 522000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.9
+JasonHammel 9000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.4
+JasonHeyward 8800000 0 0 0 0 0 1 0 0 0 154 610 13 79 60 23 0.092 0.148 0.146 0.329 0.293 0.359 0.439 0.346 121 7 21.6 16.4 6
+JasonKipnis 4166666 0 1 0 0 0 0 0 0 0 141 641 9 86 52 12 0.089 0.167 0.149 0.356 0.303 0.372 0.451 0.355 126 3.4 23 4.5 5.2
+JeanmarGomez 800000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.7
+JeffLocke 531000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.6
+JeffSamardzija 9800000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.7
+JeremyJeffress 510500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.8
+JeurysFamilia 523925 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.6
+JhonnyPeralta 15000000 0 0 0 0 0 0 0 0 1 155 640 17 64 71 1 0.078 0.173 0.136 0.311 0.275 0.334 0.411 0.323 105 6.6 3.1 0.8 1.7
+JocPederson 510000 0 0 0 0 0 1 0 0 0 151 585 26 67 54 4 0.157 0.291 0.206 0.262 0.21 0.346 0.417 0.335 115 0.1 10.3 1.8 2.8
+JoeyVotto 14000000 1 0 0 0 0 0 0 0 0 158 695 29 95 80 11 0.206 0.194 0.228 0.371 0.314 0.459 0.541 0.427 172 1.2 57.3 9.3 7.4
+JohnDanks 15750000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8
+JohnLackey 507500 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.6
+JohnnyCueto 10000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.1
+JonLester 20000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5
+JordanZimmermann 16500000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3
+JoseAbreu 8666666 1 0 0 0 0 0 0 0 0 154 668 30 88 101 0 0.058 0.21 0.212 0.333 0.29 0.347 0.502 0.361 129 1 21.1 14.8 3
+JoseAltuve 2687500 0 1 0 0 0 0 0 0 0 154 689 15 86 66 38 0.048 0.097 0.146 0.329 0.313 0.353 0.459 0.347 120 3.7 12.4 5.4 4.3
+JoseAlvarez 509500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3
+JoseBautista 14000000 0 0 0 0 0 1 0 0 0 153 666 40 108 114 8 0.165 0.159 0.285 0.237 0.25 0.377 0.536 0.389 147 2.3 38.9 18.9 4.5
+JoseQuintana 1000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.8
+JoshDonaldson 4300000 0 0 1 0 0 0 0 0 0 158 711 41 122 123 6 0.103 0.187 0.271 0.314 0.297 0.371 0.568 0.398 154 4 48.3 10.7 8.7
+JoshFields 516700 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.3
+JoshReddick 4100000 0 0 0 0 0 1 0 0 0 149 582 20 67 77 10 0.084 0.112 0.177 0.278 0.272 0.333 0.449 0.338 117 5.1 16.6 8 3
+JuanNicasio 2300000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9
+JumboDiaz 510000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3
+JunichiTazawa 2250000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1
+JustinGrimm 531500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6
+JustinUpton 14708333 0 0 0 0 0 1 0 0 0 150 620 26 85 81 19 0.11 0.256 0.203 0.304 0.251 0.336 0.454 0.34 120 4.6 18.8 4.6 3.6
+JustinWilson 556000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5
+KelvinHerrera 1600000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6
+KenleyJansen 7425000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.7
+KevinKiermaier 513800 0 0 0 0 0 1 0 0 0 151 535 10 62 40 18 0.045 0.178 0.156 0.306 0.263 0.298 0.42 0.309 98 3.5 2.2 32 5.5
+KevinPillar 512000 0 0 0 0 0 1 0 0 0 159 628 12 76 56 25 0.045 0.135 0.121 0.306 0.278 0.314 0.399 0.31 93 8.1 3.2 16.6 4.3
+KoleCalhoun 537500 0 0 0 0 0 1 0 0 0 159 686 26 78 83 4 0.066 0.239 0.167 0.304 0.256 0.308 0.422 0.317 105 3.1 6.9 6.6 3.8
+KyleGibson 537500 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.5
+KyleSeager 4500000 0 0 1 0 0 0 0 0 0 161 686 26 85 74 6 0.079 0.143 0.185 0.278 0.266 0.328 0.451 0.335 116 3 9.4 5 3.9
+LanceLynn 7000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.1
+LiamHendriks 518400 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5
+LoganForsythe 1100000 0 1 0 0 0 0 0 0 0 153 615 17 69 68 9 0.089 0.18 0.163 0.323 0.281 0.359 0.444 0.35 126 1.7 16.6 1.8 4.1
+LorenzoCain 2725000 0 0 0 0 0 1 0 0 0 140 604 16 101 72 28 0.061 0.162 0.171 0.347 0.307 0.361 0.477 0.36 129 6.2 26.2 15.7 6.6
+LucasDuda 4200000 1 0 0 0 0 0 0 0 0 135 554 27 67 73 0 0.119 0.249 0.242 0.285 0.244 0.352 0.486 0.359 133 0.1 21.5 10 3.1
+LuisGarcia 509000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4
+MadisonBumgarner 6916666 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.1
+MannyMachado 548000 0 0 1 0 0 0 0 0 0 162 713 35 102 86 20 0.098 0.156 0.216 0.297 0.286 0.359 0.502 0.37 134 1.1 29.1 11.2 6.8
+MarcusSemien 510000 0 0 1 0 0 0 0 0 0 155 601 15 65 45 11 0.07 0.22 0.147 0.312 0.257 0.31 0.405 0.311 98 1 0.3 3.3 1.7
+MarkBuehrle 20000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.1
+MarkMelancon 5400000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.5
+MarlonByrd 8000000 0 0 0 0 0 1 0 0 0 135 544 23 58 73 2 0.053 0.267 0.206 0.297 0.247 0.29 0.453 0.317 100 0.6 0.3 7.8 1
+MartinPrado 11000000 0 0 1 0 0 0 0 0 0 129 551 9 52 63 1 0.067 0.123 0.106 0.313 0.288 0.338 0.394 0.318 100 0.1 0.1 12.5 3.1
+MattCarpenter 3750000 0 0 1 0 0 0 0 0 0 154 665 28 101 84 4 0.122 0.227 0.233 0.321 0.272 0.365 0.505 0.372 139 1.5 31.6 3.5 5.2
+MattDuffy 509000 0 1 0 0 0 0 0 0 0 149 612 12 77 77 12 0.049 0.157 0.133 0.336 0.295 0.334 0.428 0.331 116 4.4 16 11.5 4.9
+MaxScherzer 17142857 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6.4
+MichaelBrantley 5875000 0 0 0 0 0 1 0 0 0 137 596 15 68 84 15 0.101 0.086 0.17 0.318 0.31 0.379 0.48 0.368 135 1.4 25.8 9.1 3.8
+MiguelCabrera 22000000 1 0 0 0 0 0 0 0 0 119 511 18 64 76 1 0.151 0.16 0.196 0.384 0.338 0.44 0.534 0.413 165 5.1 33.3 9.2 4.3
+MikeLeake 9775000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.7
+MikeMoustakas 2640000 0 0 1 0 0 0 0 0 0 147 614 22 73 82 1 0.07 0.124 0.186 0.294 0.284 0.348 0.47 0.353 124 5.4 11.5 3.7 3.8
+MikeTrout 6083333 0 0 0 0 0 1 0 0 0 159 682 41 104 90 11 0.135 0.232 0.29 0.344 0.299 0.402 0.59 0.415 172 3.3 60.4 2.1 9
+MookieBetts 514500 0 0 0 0 0 1 0 0 0 145 654 18 92 77 21 0.07 0.125 0.188 0.31 0.291 0.341 0.479 0.351 119 8.3 22.5 1.3 4.8
+NeilWalker 8000000 0 1 0 0 0 0 0 0 0 151 603 16 69 71 4 0.073 0.182 0.158 0.306 0.269 0.328 0.427 0.325 108 2.7 8.6 4.7 2.4
+NelsonCruz 14250000 0 0 0 0 0 1 0 0 0 152 655 44 90 93 3 0.09 0.25 0.264 0.35 0.302 0.369 0.566 0.396 158 2.5 41.5 17.6 4.8
+NickMarkakis 11000000 0 0 0 0 0 1 0 0 0 156 686 3 73 53 2 0.102 0.121 0.08 0.338 0.296 0.37 0.376 0.327 107 1.7 4.2 10.8 1.6
+NolanArenado 512500 0 0 1 0 0 0 0 0 0 157 665 42 97 130 2 0.051 0.165 0.287 0.284 0.287 0.323 0.575 0.371 119 0.9 14.1 7.6 4.5
+PaulGoldschmidt 3083333 1 0 0 0 0 0 0 0 0 159 695 33 103 110 21 0.17 0.217 0.249 0.382 0.321 0.435 0.57 0.418 164 3.1 55 6.9 7.4
+PedroBaez 512500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1
+PedroStrop 2525000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1
+RADickey 12000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+RandallDelgado 526000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4
+RussellMartin 7000000 0 0 0 1 0 0 0 0 0 129 507 23 76 77 4 0.105 0.209 0.218 0.262 0.24 0.329 0.458 0.34 114 4.6 3.7 12.2 3.5
+RyanBraun 13111111 0 0 0 0 0 1 0 0 0 140 568 25 87 84 24 0.095 0.202 0.213 0.322 0.285 0.356 0.498 0.366 129 1.9 21.2 12.2 2.8
+SalvadorPerez 1750000 0 0 0 1 0 0 0 0 0 142 553 21 52 70 1 0.024 0.148 0.166 0.27 0.26 0.28 0.426 0.3 87 6.7 14.9 12 1.6
+SamDyson 507500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1
+ScottKazmir 13000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.4
+SergioRomo 6000000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8
+ShawnKelley 2835000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ShelbyMiller 535000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.4
+ShinSooChoo 14000000 0 0 0 0 0 1 0 0 0 149 653 22 94 82 4 0.116 0.225 0.187 0.335 0.276 0.375 0.463 0.365 127 1.7 22.1 10.5 3.5
+SonnyGray 512500 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.8
+StarlingMarte 1333333 0 0 0 0 0 1 0 0 0 153 633 19 84 81 30 0.043 0.194 0.157 0.333 0.287 0.337 0.444 0.337 117 1.2 11.3 2.8 3.6
+StephenVogt 512500 1 0 0 0 0 0 0 0 0 136 511 18 58 71 0 0.11 0.19 0.182 0.29 0.261 0.341 0.443 0.335 115 4.4 4.4 0.4 2.3
+ToddFrazier 3750000 0 0 1 0 0 0 0 0 0 157 678 35 82 89 13 0.065 0.202 0.242 0.271 0.255 0.309 0.498 0.342 114 0.6 10.7 9.6 4.4
+TonySipp 2400000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+TonyWatson 1750000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4
+TravisWood 5685000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.1
+TrevorBauer 1940000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.8
+TrevorPlouffe 4800000 0 0 1 0 0 0 0 0 0 152 632 22 74 86 2 0.079 0.196 0.19 0.274 0.244 0.307 0.435 0.321 102 1.9 0.7 3.5 2.5
+TrevorRosenthal 535000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+TroyTulowitzki 20000000 0 0 0 0 0 0 0 0 1 128 534 17 77 70 1 0.071 0.213 0.16 0.331 0.28 0.337 0.44 0.335 100 4 4 9.1 2.3
+TysonRoss 5250000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4.4
+WadeDavis 7000000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2
+WadeMiley 3666666 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.6
+WeiYinChen 4750000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.8
+WillHarris 513900 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+WillSmith 512500 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4
+WilmerFlores 513543 0 0 0 0 0 0 0 0 1 137 510 16 55 59 0 0.037 0.124 0.145 0.273 0.263 0.295 0.408 0.304 95 0 2.7 4.3 1.9
+WilsonRamos 3550000 0 0 0 1 0 0 0 0 0 128 504 15 41 68 0 0.042 0.2 0.128 0.256 0.229 0.258 0.358 0.265 63 1.6 23.5 11.1 0.4
+XanderBogaerts 543000 0 0 0 0 0 0 0 0 1 156 654 7 84 81 10 0.049 0.154 0.101 0.372 0.32 0.355 0.421 0.338 109 3.7 10.8 8 4.3
+YadierMolina 15200000 0 0 0 1 0 0 0 0 0 136 530 4 34 61 3 0.06 0.111 0.08 0.295 0.27 0.31 0.35 0.287 80 2.5 14.6 10.7 1.3
+YangervisSolarte 516400 0 0 1 0 0 0 0 0 0 152 571 14 63 63 1 0.06 0.098 0.158 0.279 0.27 0.32 0.428 0.324 109 4.5 1.6 3.9 1.6
+YimiGarcia 510000 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9
+YoenisCespedes 10500000 0 0 0 0 0 1 0 0 0 159 676 35 101 105 7 0.049 0.209 0.251 0.323 0.291 0.328 0.542 0.367 135 3.4 31.2 10.6 6.7
+YordanoVentura 750000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.7
+YovaniGallardo 13000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.5
+YunelEscobar 5000000 0 0 0 0 0 0 0 0 1 139 591 9 75 56 2 0.076 0.118 0.101 0.347 0.314 0.375 0.415 0.348 120 6.4 7.4 6.1 2.1
+ZachBritton 3200000 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.1
+ZachMcAllister 520400 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9
+ZackGreinke 27000000 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5.9
+;
+
+
+param whichHand:
+	batLeft throwLeft :=
+	AJBurnett 0 0
+AJPollock 0 0
+AdamEaton 1 0
+AdamJones 0 0
+AdamLind 1 0
+AdrianBeltre 0 0
+AdrianGonzalez 1 0
+AlAlburquerque 0 0
+AndreltonSimmons 0 0
+AndrewChafin 0 1
+AndrewMcCutchen 0 0
+AndrewMiller 0 1
+AnthonyBass 0 0
+AnthonyRizzo 1 0
+AntonioBastardo 0 1
+AroldisChapman 0 1
+ArquimedesCaminero 0 0
+AsdrubalCabrera 0 0
+AustinJackson 0 0
+BartoloColon 0 0
+BenRevere 1 0
+BillyBurns 0 0
+BlaineBoyer 0 0
+BlakeTreinen 0 0
+BradBrach 0 0
+BrandonBelt 1 0
+BrandonCrawford 1 0
+BrandonPhillips 0 0
+BrettCecil 0 1
+BrettGardner 1 0
+BrianDozier 0 0
+BrianMatusz 0 1
+BrianMcCann 1 0
+BrockHolt 1 0
+BryanMorris 0 0
+BryceHarper 1 0
+BusterPosey 0 0
+CameronMaybin 0 0
+CarlosBeltran 0 0
+CarlosGonzalez 1 0
+CarlosSantana 0 0
+CarlosTorres 0 0
+CarlosVillanueva 0 0
+CarsonSmith 0 0
+CesarRamos 0 1
+CharlieBlackmon 1 0
+ChrisCoghlan 1 0
+ChrisDavis 1 0
+ChrisSale 0 1
+ChrisTillman 0 0
+ChristianYelich 1 0
+ClaytonKershaw 0 1
+CodyAllen 0 0
+ColbyLewis 0 0
+ColeHamels 0 1
+CollinMcHugh 0 0
+CoreyKluber 0 0
+CraigKimbrel 0 0
+CurtisGranderson 1 0
+DallasKeuchel 0 1
+DanJennings 0 1
+DanielHudson 0 0
+DanielMurphy 1 0
+DavidOrtiz 1 0
+DavidPeralta 1 0
+DavidPrice 0 1
+DavidRobertson 0 0
+DeeGordon 1 0
+DellinBetances 0 0
+DerekNorris 0 0
+DexterFowler 0 0
+DidiGregorius 1 0
+EdinsonVolquez 0 0
+EdwinEncarnacion 0 0
+EnderInciarte 1 0
+EricHosmer 1 0
+EvanLongoria 0 0
+FelixHernandez 0 0
+FernandoSalas 0 0
+FranciscoCervelli 0 0
+FranciscoLiriano 0 1
+FranklinMorales 0 1
+GerritCole 0 0
+GioGonzalez 0 1
+GregoryPolanco 1 0
+HectorRondon 0 0
+IanDesmond 0 0
+IanKinsler 0 0
+JDMartinez 0 0
+JacobdeGrom 0 0
+JakeArrieta 0 0
+JakeOdorizzi 0 0
+JasonHammel 0 0
+JasonHeyward 1 0
+JasonKipnis 1 0
+JeanmarGomez 0 0
+JeffLocke 0 1
+JeffSamardzija 0 0
+JeremyJeffress 0 0
+JeurysFamilia 0 0
+JhonnyPeralta 0 0
+JocPederson 1 0
+JoeyVotto 1 0
+JohnDanks 0 1
+JohnLackey 0 0
+JohnnyCueto 0 0
+JonLester 0 1
+JordanZimmermann 0 0
+JoseAbreu 0 0
+JoseAltuve 0 0
+JoseAlvarez 0 1
+JoseBautista 0 0
+JoseQuintana 0 1
+JoshDonaldson 0 0
+JoshFields 0 0
+JoshReddick 1 0
+JuanNicasio 0 0
+JumboDiaz 0 0
+JunichiTazawa 0 0
+JustinGrimm 0 0
+JustinUpton 0 0
+JustinWilson 0 1
+KelvinHerrera 0 0
+KenleyJansen 0 0
+KevinKiermaier 1 0
+KevinPillar 0 0
+KoleCalhoun 1 0
+KyleGibson 0 0
+KyleSeager 1 0
+LanceLynn 0 0
+LiamHendriks 0 0
+LoganForsythe 0 0
+LorenzoCain 0 0
+LucasDuda 1 0
+LuisGarcia 0 0
+MadisonBumgarner 0 1
+MannyMachado 0 0
+MarcusSemien 0 0
+MarkBuehrle 0 1
+MarkMelancon 0 0
+MarlonByrd 0 0
+MartinPrado 0 0
+MattCarpenter 1 0
+MattDuffy 0 0
+MaxScherzer 0 0
+MichaelBrantley 1 0
+MiguelCabrera 0 0
+MikeLeake 0 0
+MikeMoustakas 1 0
+MikeTrout 0 0
+MookieBetts 0 0
+NeilWalker 0 0
+NelsonCruz 0 0
+NickMarkakis 1 0
+NolanArenado 0 0
+PaulGoldschmidt 0 0
+PedroBaez 0 0
+PedroStrop 0 0
+RADickey 0 0
+RandallDelgado 0 0
+RussellMartin 0 0
+RyanBraun 0 0
+SalvadorPerez 0 0
+SamDyson 0 0
+ScottKazmir 0 1
+SergioRomo 0 0
+ShawnKelley 0 0
+ShelbyMiller 0 0
+ShinSooChoo 1 0
+SonnyGray 0 0
+StarlingMarte 0 0
+StephenVogt 1 0
+ToddFrazier 0 0
+TonySipp 0 1
+TonyWatson 0 1
+TravisWood 0 1
+TrevorBauer 0 0
+TrevorPlouffe 0 0
+TrevorRosenthal 0 0
+TroyTulowitzki 0 0
+TysonRoss 0 0
+WadeDavis 0 0
+WadeMiley 0 1
+WeiYinChen 0 1
+WillHarris 0 0
+WillSmith 0 1
+WilmerFlores 0 0
+WilsonRamos 0 0
+XanderBogaerts 0 0
+YadierMolina 0 0
+YangervisSolarte 0 0
+YimiGarcia 0 0
+YoenisCespedes 0 0
+YordanoVentura 0 0
+YovaniGallardo 0 0
+YunelEscobar 0 0
+ZachBritton 0 1
+ZachMcAllister 0 0
+ZackGreinke 0 0;
+
+
+
+
+
+
+
+
+

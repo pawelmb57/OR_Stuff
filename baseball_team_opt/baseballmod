@@ -1,0 +1,140 @@
+
+
+set players;
+set superstars;
+set batters;
+set pitchers;
+
+
+
+set variables;
+set hands;
+set battingPositions;
+set pitchingPositions;
+
+param playerdata{players,variables};
+param whichHand{players,hands};
+
+
+#set batters := {p in players : playerdata[p,'RBI'] : playerdata[p,'RBI'] > 0]};
+
+
+var team{players} binary;
+var shortlist{superstars} binary;
+
+
+# Objective Function
+# Maximize WAR
+maximize war: sum{p in players} (
+				team[p]*playerdata[p,'WAR']
+				);
+
+
+# Team/Position Constraints
+subject to c1: sum{p in players}  (team[p]*playerdata[p,'first']) = 2;
+subject to c2: sum{p in players}  (team[p]*playerdata[p,'second']) = 2;
+subject to c3: sum{p in players}  (team[p]*playerdata[p,'third']) = 1;
+subject to c4: sum{p in players}  (team[p]*playerdata[p,'C']) = 3;
+subject to c5: sum{p in players}  (team[p]*playerdata[p,'Closer']) = 2;
+subject to c6: sum{p in players}  (team[p]*playerdata[p,'OF']) = 10;
+subject to c7: sum{p in players}  (team[p]*playerdata[p,'Reliever']) = 11;
+subject to c8: sum{p in players}  (team[p]*playerdata[p,'SP']) = 6;
+subject to c9: sum{p in players}  (team[p]*playerdata[p,'SS']) = 3;
+
+# Salary Cap Constraints
+
+subject to c10: sum{p in players} (team[p]*playerdata[p,'Salary']) <= 100000000;
+
+
+# Of the players that bat, the number of players that batLeft should be between 40% and 60%
+# sum of batleft should be between 10 and 15
+
+subject to batLeft_constraint1 :  sum{t in battingPositions , p in players} team[p]*whichHand[p,'batLeft'] >= 5 ;
+subject to batLeft_constraint2 :  sum{t in battingPositions , p in players} team[p]*whichHand[p,'batLeft'] <= 8 ;
+
+# Of the players that pitch, the number of players that throwLeft should be between 30% and 70%
+
+subject to throwLeft_constraint1 : sum{t in battingPositions , p in players} team[p]*whichHand[p,'throwLeft'] >= 3;
+subject to throwLeft_constraint2 : sum{t in battingPositions , p in players} team[p]*whichHand[p,'throwLeft'] >= 9;
+
+# One superstar needs to be on the roster ( Managers Choice Constraints)
+
+subject to linkingSuperstarsConstraints {s in superstars}: shortlist[s]-team[s]  = 0;
+subject to superstarChoice : sum{s in superstars} shortlist[s] >= 1;
+
+
+# Average RBI of the players chosen should be about 5pt higher than the average of all players (97 total available batters for 21 positions)
+
+subject to avgRBI : 
+	sum{b in batters} ((team[b]*playerdata[b,'RBI'])/21) / (sum{p in batters} (playerdata[p,'RBI'])/97) >= .55
+;
+
+# Average WAR of the chosen team should be about 5pt higher than the average of all players (40 person roster and 199 total available players)
+
+subject to avgWAR :
+	sum{p in players} ((team[p]*playerdata[p,'WAR'])/40) / (sum{p2 in players} (playerdata[p2,'WAR'])/199) >= 0.55
+;
+
+# Chosen team quality should be 10% better than average team quality 
+# The quality of the team is calculated by a linear regression equation that correlated war to the available statistics
+
+subject to avgQuality :
+	sum{p in players} 	(-13.236023 + 
+						4.750107835*team[p]*playerdata[p,'G'] 
+						-1.837335804*team[p]*playerdata[p,'PA'] 
+						+0.648452959*team[p]*playerdata[p,'HR']
+						+1.827123175*team[p]*playerdata[p,'R']
+						-0.755384289*team[p]*playerdata[p,'RBI']
+						-0.138846186*team[p]*playerdata[p,'SB']
+						-0.000326315*team[p]*playerdata[p,'BB']
+						+0.000866331*team[p]*playerdata[p,'K']
+						-1.811791626*team[p]*playerdata[p,'BABIP']
+						+7.087183462*team[p]*playerdata[p,'AVG']
+						+7.016056232*team[p]*playerdata[p,'wOBA']
+						+0.110549655*team[p]*playerdata[p,'BsR']
+						) 
+	/
+	sum{x in players} 	(-13.236023 + 
+						4.750107835*team[p]*playerdata[x,'G'] 
+						-1.837335804*team[p]*playerdata[x,'PA'] 
+						+0.648452959*team[p]*playerdata[x,'HR']
+						+1.827123175*team[p]*playerdata[x,'R']
+						-0.755384289*team[p]*playerdata[x,'RBI']
+						-0.138846186*team[p]*playerdata[x,'SB']
+						-0.000326315*team[p]*playerdata[x,'BB']
+						+0.000866331*team[p]*playerdata[x,'K']
+						-1.811791626*team[p]*playerdata[x,'BABIP']
+						+7.087183462*team[p]*playerdata[x,'AVG']
+						+7.016056232*team[p]*playerdata[x,'wOBA']
+						+0.110549655*team[p]*playerdata[x,'BsR']
+						) >= 1
+;	
+
+
+													
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
