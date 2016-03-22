@@ -5,8 +5,10 @@
 
 Original paper can be found: [here](http://www.sciencedirect.com/science/article/pii/S0305048311000569)
 
-[Command File](https://github.com/pawelmb57/operations_research_work/blob/master/antigen_bundles/abp_cmd.cmd)<Enter>
+[Command File](https://github.com/pawelmb57/operations_research_work/blob/master/antigen_bundles/abp_cmd.cmd)
+
 [Data](https://github.com/pawelmb57/operations_research_work/blob/master/antigen_bundles/abp_dat.dat)
+
 [Optimal Model File](https://github.com/pawelmb57/operations_research_work/blob/master/antigen_bundles/abp_mod_optimal.mod)
 
 [Optimal Solution Output](https://github.com/pawelmb57/operations_research_work/blob/master/antigen_bundles/optimal_solutionOutput.pdf)
