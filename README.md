@@ -5,4 +5,4 @@ These exercises were completed as part of an Operations Research class at Drexel
   * [Minimum Cost Network Flow](https://github.com/pawelmb57/OR_Stuff/tree/master/Minimum_Cost_Network_Flow)
   * [Baseball Team Optimization](https://github.com/pawelmb57/operations_research_work/tree/master/baseball_team_opt)
   * [Basketball Tournament Scheduling](https://github.com/pawelmb57/operations_research_work/tree/master/basketball_tournament_scheduling)
-
+  * [Antigen Bundling](https://github.com/pawelmb57/operations_research_work/tree/master/antigen_bundles)
